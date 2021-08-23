@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Link, Switch, BrowserRouter as Router } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
+import Sneakers from './components/Sneakers'
 
-function App() {
+import './App.css'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className = 'mainHeader'/>
+      <Router>
+      <nav>
+        <div className='Banner'>
+          <div className='navLinks'>
+            <div className ='banner_left'>
+              <button id = 'homeButton'><Link to="/">Home </Link></button>
+            </div>
+            <div className = 'title'>
+              <h1>HIGH TOPS</h1>
+            </div>
+            <div className='banner_right'>
+              <button id = 'aboutButton'><Link to="/About">About</Link></button>
+              <button id = 'SneakersButton'><Link to="/Sneakers">Sneakers</Link></button>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
+        <Switch>
+          <Route path="/Sneakers">
+            <Sneakers/>
+          </Route>
+          <Route path="/About">
+            <About/>
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+        </Router>
     </div>
   );
-}
-
+};
 export default App;

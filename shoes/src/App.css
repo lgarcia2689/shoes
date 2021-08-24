@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -31,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: grey;
 }
 ol, ul {
 	list-style: none;
@@ -51,11 +54,33 @@ table {
 .navLinks{
   display: flex;
   justify-content: space-between;
-  height: 4em;
+  /* height: 4em; */
   align-items: center;
+  padding: 1em;
+  font-family: 'Permanent Marker', cursive;
 }
+a:link {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+  }
+a:hover {
+	color: yellow;
+	background-color: transparent;
+	text-decoration: underline;
+	transition:1500ms
+  }
 .title{
   font-family: 'Nosifer';
   font-size: 40px;
+  color: black;
 
+}
+.banner_right{
+	display: flex;
+  	justify-content: space-between;
+	
+}
+.ab{
+	margin-right: 1em;
 }

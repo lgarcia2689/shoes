@@ -15,14 +15,21 @@ const App = () => {
         <div className='Banner'>
           <div className='navLinks'>
             <div className ='banner_left'>
-              <button id = 'homeButton'><Link to="/">Home </Link></button>
+              <Link to="/">Home </Link>
+              
             </div>
             <div className = 'title'>
-              <h1>HIGH TOPS</h1>
+              <a href = "/">
+                <h1>HIGH TOPS</h1>
+              </a>
             </div>
             <div className='banner_right'>
-              <button id = 'aboutButton'><Link to="/About">About</Link></button>
-              <button id = 'SneakersButton'><Link to="/Sneakers">Sneakers</Link></button>
+              <div className='ab'>
+                <Link to="/About" >About</Link>
+              </div>
+              <div className='sn'>
+                <Link to="/Sneakers">Sneakers</Link>
+              </div>
             </div>
 
           </div>
